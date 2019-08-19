@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 
 app.get("/", (req, res) => {
-    res.sendfile(__dirname + 'index.html')
+    res.sendfile(__dirname + '/index.html');
 
-})
+});
 
 
 app.listen(3000); 
