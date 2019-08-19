@@ -6,6 +6,19 @@ const create = ({name}) => {
     return lead;
 };
 
+const csv = (callback) => {
+    const leads = firebase.database().ref('Leads');
+    const data = [];
+    leads.on('value', (snapshot) => {
+        snapshot.forEach((lead)=> {
+            const {name} = lead.val();
+            data.push([lead.key, name]);
+        });
+        callback(data);
+    });
+};
+
 module.exports = {
     create,
+    csv,
 };

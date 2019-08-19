@@ -21,7 +21,13 @@ app.get('/', (req,res) => {
 app.post('/leads', (req,res) => {
     const {name} = req.body;
     const lead = Lead.create({name});
-    res.send(lead);
+    res.send('Obrigado!');
+});
+
+app.get('/leads.csv', (req, res) => {
+    Lead.csv((data) => {
+        res.send(data);
+    });
 });
 
 app.listen(3000);
