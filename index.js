@@ -25,6 +25,9 @@ app.post('/leads', (req,res) => {
 });
 
 app.get('/leads.csv', (req, res) => {
+    res.setHeader('Content-Type', 'text/csv');
+    res.setHeader('Content-Disposition', 'attachment; filename=\'' + 'meusleads.csv\'');
+    
     Lead.csv((data) => {
         res.send(data);
     });
