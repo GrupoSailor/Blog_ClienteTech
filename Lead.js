@@ -1,4 +1,5 @@
-const firebase = require('/Users/Aurea/Documents/Gama Academy/Assigments/ClienteTech/firebase.js');
+/*const firebase = require('/Users/Aurea/Documents/Gama Academy/Assigments/ClienteTech/firebase.js');*/
+const firebase = require('./firebase.js');
 const stringify = require('csv-stringify');
 
 

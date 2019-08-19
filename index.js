@@ -1,7 +1,7 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
 /*mudar destino quando rodar local*/
-const Lead = require('/Users/Aurea/Documents/Gama Academy/Assigments/ClienteTech/Lead.js');
+const Lead = require('./Lead.js');
 
 /* -- TRATATIVA PARA ENCONTRAR ERRO NO DIRETORIO:
 try{
