@@ -1,0 +1,18 @@
+:root{
+    --background_color_one: #E5E5E5;
+    --background_color_two:
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    margin: 0;
+}
+
+.wrapper {
+    width: 1000%;
+    margin: 0 auto;
+    background-color: var(--background_color_one);
+}
