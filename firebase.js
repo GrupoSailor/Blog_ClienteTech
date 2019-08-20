@@ -1,6 +1,5 @@
 const firebase = require("firebase-admin");
 
-/*mudar destino quando rodar local*/
 const serviceAccount = require("./secrets/firebase-sa.json");
 
 firebase.initializeApp({

@@ -1,7 +1,7 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
 /*mudar destino quando rodar local*/
-const Lead = require('./Lead.js');
+const Lead = require('./public/Lead.js');
 
 /* -- TRATATIVA PARA ENCONTRAR ERRO NO DIRETORIO:
 try{
@@ -15,7 +15,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true}));
 
 app.get('/', (req,res) => {
-    res.sendfile('index.html');
+    res.sendfile('./public/index.html');
 });
 
 app.post('/leads', (req,res) => {
@@ -24,7 +24,7 @@ app.post('/leads', (req,res) => {
     res.send('Obrigado!');
 });
 
-app.get('/leads.csv', (req, res) => {
+app.get('./leads.csv', (req, res) => {
     res.setHeader('Content-Type', 'text/csv');
     res.setHeader('Content-Disposition', 'attachment; filename=\'' + 'meusleads.csv\'');
     
